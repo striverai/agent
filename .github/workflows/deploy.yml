@@ -24,7 +24,7 @@ jobs:
             cd /opt/goclaw
             git fetch origin main
             git reset --hard origin/main
-            docker compose -f docker-compose.yml -f docker-compose.postgres.yml pull goclaw || true
+            docker compose -f docker-compose.yml -f docker-compose.postgres.yml build goclaw
             docker compose -f docker-compose.yml -f docker-compose.postgres.yml up -d
             docker compose -f docker-compose.yml -f docker-compose.postgres.yml -f docker-compose.upgrade.yml run --rm upgrade
             echo "Waiting for GoClaw to become healthy..."
