@@ -43,6 +43,7 @@ import { usePendingPairingsCount } from "@/hooks/use-pending-pairings-count";
 import { useAuthStore } from "@/stores/use-auth-store";
 import { useTenants } from "@/hooks/use-tenants";
 import { getRuntimeBranding } from "@/lib/branding";
+import { BrandIcon } from "@/components/brand-icon";
 
 interface SidebarProps {
   collapsed: boolean;
@@ -74,14 +75,14 @@ export function Sidebar({ collapsed, onNavItemClick }: SidebarProps) {
       <div className="flex h-14 items-center border-b px-4">
         {!collapsed && (
           <div className="flex items-center gap-2.5">
-            <img src={branding.logoUrl} alt={branding.appName} className="h-7 w-7" />
-            <span className="text-base font-black tracking-wider uppercase text-sidebar-primary">
+            <BrandIcon className="h-7 w-7" />
+            <span className="text-base font-black tracking-wider uppercase text-black dark:text-white transition-colors">
               {branding.appShortName}
             </span>
           </div>
         )}
         {collapsed && (
-          <img src={branding.logoUrl} alt={branding.appName} className="mx-auto h-7 w-7" />
+          <BrandIcon className="mx-auto h-7 w-7" />
         )}
       </div>
 

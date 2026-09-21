@@ -2,6 +2,7 @@ import { Moon, Sun } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useUiStore } from "@/stores/use-ui-store";
 import { getRuntimeBranding } from "@/lib/branding";
+import { BrandIcon } from "@/components/brand-icon";
 
 interface LoginLayoutProps {
   children: React.ReactNode;
@@ -31,8 +32,10 @@ export function LoginLayout({ children, subtitle }: LoginLayoutProps) {
       </button>
       <div className="w-full max-w-sm space-y-6 rounded-lg border bg-card p-6 shadow-sm sm:p-8">
         <div className="text-center">
-          <img src={branding.logoUrl} alt={branding.appName} className="mx-auto mb-3 h-16 w-16" />
-          <h1 className="text-3xl font-black tracking-wider uppercase">{branding.appName}</h1>
+          <BrandIcon className="mx-auto mb-3 h-16 w-16" />
+          <h1 className="text-3xl font-black tracking-wider uppercase text-black dark:text-white transition-colors">
+            {branding.appName}
+          </h1>
           {subtitle && (
             <p className="mt-2 text-sm text-muted-foreground">{subtitle}</p>
           )}

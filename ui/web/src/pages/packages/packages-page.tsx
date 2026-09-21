@@ -45,12 +45,13 @@ function isValidTab(v: string | null): v is TabId {
   return VALID_TABS.includes(v as TabId);
 }
 
+import { BrandIcon } from "@/components/brand-icon";
+
 // --- Tab fallback skeleton ---
 function TabLoader() {
-  const branding = getRuntimeBranding();
   return (
     <div className="py-8 flex justify-center text-muted-foreground">
-      <img src={branding.logoUrl} alt="" className="h-6 w-6 animate-pulse opacity-40" />
+      <BrandIcon className="h-6 w-6 animate-pulse opacity-40" />
     </div>
   );
 }

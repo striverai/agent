@@ -21,6 +21,8 @@ import {
 
 const ReactMarkdown = lazy(() => import("react-markdown"));
 
+import { BrandIcon } from "@/components/brand-icon";
+
 interface AboutDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -57,7 +59,7 @@ export function AboutDialog({ open, onOpenChange }: AboutDialogProps) {
       <DialogContent className="sm:max-w-lg">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2.5">
-            <img src={branding.logoUrl} alt={branding.appName} className="h-7 w-7" />
+            <BrandIcon className="h-7 w-7" />
             {t("about.title")}
             {updateAvailable && latestVersion && (
               <span className="rounded-full bg-amber-500/15 px-2 py-0.5 text-xs font-medium text-amber-600 dark:text-amber-400">
