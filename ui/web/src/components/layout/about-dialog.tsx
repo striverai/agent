@@ -5,7 +5,6 @@ import { useWsCall } from "@/hooks/use-ws-call";
 import { Methods } from "@/api/protocol";
 import type { HealthPayload } from "@/pages/overview/types";
 import { cleanVersion } from "@/lib/clean-version";
-import { getRuntimeBranding } from "@/lib/branding";
 import {
   Dialog,
   DialogContent,
@@ -52,7 +51,6 @@ export function AboutDialog({ open, onOpenChange }: AboutDialogProps) {
   const updateAvailable = health?.updateAvailable ?? false;
   const updateUrl = health?.updateUrl;
   const releaseNotes = health?.releaseNotes;
-  const branding = getRuntimeBranding();
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>

@@ -12,7 +12,6 @@ import { usePackageRuntimes } from "./hooks/use-package-runtimes";
 import { RuntimesStickyHeader } from "./runtimes-sticky-header";
 import { useUpdates } from "./hooks/use-updates";
 import { UpdatesList } from "./components/updates-list";
-import { getRuntimeBranding } from "@/lib/branding";
 
 // --- Lazy tab bodies (each is a separate chunk) ---
 const SystemPackagesTab = lazy(() =>
