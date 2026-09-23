@@ -113,7 +113,7 @@ func (c *Channel) SendPairingApproved(ctx context.Context, chatID, botName strin
 		return fmt.Errorf("invalid chat ID: %w", err)
 	}
 	if botName == "" {
-		botName = "GoClaw"
+		botName = "Striver AI"
 	}
 
 	msg := tu.Message(tu.ID(id), c.SystemMessage("", systemmessages.KeyPairingApproved, systemmessages.Vars{

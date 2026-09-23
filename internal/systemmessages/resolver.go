@@ -17,7 +17,7 @@ const (
 	KeyPairingApproved              = "pairing.approved"
 )
 
-const defaultAppName = "GoClaw"
+const defaultAppName = "Striver AI"
 
 // Vars are {{name}} template variables used when rendering a system message.
 type Vars map[string]string
